@@ -2,23 +2,22 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker;
 
-my $repo = 'graphviz-perl/GraphViz2-DBI';
+my $repo = 'graphviz-perl/GraphViz2-Parse-RecDescent';
 WriteMakefile(
   AUTHOR => 'Ron Savage (ron@savage.net.au)',
-  ABSTRACT => "Use GraphViz2 to visualize a database schema",
+  ABSTRACT => "Use GraphViz2 to visualize a Parse::RecDescent grammar",
   MIN_PERL_VERSION => 5.010001,
-  NAME => 'GraphViz2::DBI',
+  NAME => 'GraphViz2::Parse::RecDescent',
   PREREQ_PM => {
     'GraphViz2' => '2.48',
-    'DBIx::Admin::TableInfo' => '3.00',
-    'Lingua::EN::PluralToSingular' => '0.14',
     'Moo' => '2.001001',
+    'Parse::RecDescent' => 1.965001,
   },
   TEST_REQUIRES => {
     'Test::More' => 1.001002,
-    'DBD::SQLite' => '1.66',
+    'Test::Snapshot' => '0.06',
   },
-  VERSION_FROM => 'lib/GraphViz2/DBI.pm',
+  VERSION_FROM => 'lib/GraphViz2/Parse/RecDescent.pm',
   LICENSE => 'perl',
   META_MERGE => {
     'meta-spec' => { version => 2 },
