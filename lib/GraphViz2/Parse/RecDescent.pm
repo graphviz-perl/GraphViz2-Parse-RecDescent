@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use warnings  qw(FATAL utf8); # Fatalize encoding glitches.
 
-our $VERSION = '2.50';
+our $VERSION = '2.51';
 
 use GraphViz2;
 use Moo;
